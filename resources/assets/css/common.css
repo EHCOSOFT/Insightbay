@@ -1,74 +1,72 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: "Pretendard";
-    font-weight: 900;
-    font-display: swap;
-    src: local("Pretendard Black"),
-        url("../font/Pretendard-Black.woff2") format("woff2"),
-        url("../font/Pretendard-Black.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Pretendard";
+    font-family: 'NanumSquare';
     font-weight: 800;
-    font-display: swap;
-    src: local("Pretendard ExtraBold"),
-        url("../font/Pretendard-ExtraBold.woff2") format("woff2"),
-        url("../font/Pretendard-ExtraBold.woff") format("woff");
+    src: url(NanumSquareEB.eot);
+    src: local('☺'),
+        url(../font/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumSquareEB.woff2) format('woff2'),
+        url(../font/NanumSquareEB.woff) format('woff'),
+        url(../font/NanumSquareEB.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: "Pretendard";
+    font-family: 'NanumSquare';
     font-weight: 700;
-    font-display: swap;
-    src: local("Pretendard Bold"),
-        url("../font/Pretendard-Bold.woff2") format("woff2"),
-        url("../font/Pretendard-Bold.woff") format("woff");
+    src: url(NanumSquareB.eot);
+    src: local('☺'),
+        url(../font/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumSquareB.woff2) format('woff2'),
+        url(../font/NanumSquareB.woff) format('woff'),
+        url(../font/NanumSquareB.ttf) format('truetype');
 }
 
 @font-face {
-    font-family: "Pretendard";
-    font-weight: 600;
-    font-display: swap;
-    src: local("Pretendard SemiBold"),
-        url("../font/Pretendard-SemiBold.woff2") format("woff2"),
-        url("../font/Pretendard-SemiBold.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Pretendard";
-    font-weight: 500;
-    font-display: swap;
-    src: local("Pretendard Medium"),
-        url("../font/Pretendard-Medium.woff2") format("woff2"),
-        url("../font/Pretendard-Medium.woff") format("woff");
-}
-
-@font-face {
-    font-family: "Pretendard";
+    font-family: 'NanumSquare';
     font-weight: 400;
-    font-display: swap;
-    src: local("Pretendard Regular"),
-        url("../font/Pretendard-Regular.woff2") format("woff2"),
-        url("../font/Pretendard-Regular.woff") format("woff");
+    src: url(NanumSquareR.eot);
+    src: local('☺'),
+        url(../font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumSquareR.woff2) format('woff2'),
+        url(../font/NanumSquareR.woff) format('woff'),
+        url(../font/NanumSquareR.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 300;
+    src: url(NanumSquareL.eot);
+    src: local('☺'),
+        url(../font/NanumSquareL.eot?#iefix) format('embedded-opentype'),
+        url(../font/NanumSquareL.woff2) format('woff2'),
+        url(../font/NanumSquareL.woff) format('woff'),
+        url(../font/NanumSquareL.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'esamanru';
+    font-weight: 700;
+    src: local('esamanru Bold'),
+        url(../font/esamanru-Bold.woff2) format('woff2'),
+        url(../font/esamanru-Bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'lato';
+    font-weight: 900;
+    src: local('Lato Black'),
+        url(../font/lato-black.woff2) format('woff2'),
+        url(../font/lato-black.woff) format('woff');
+}
 
 
 :root {
-    --color-23B4F5-primary: #23B4F5;
-    --color-2897FF-primary-text: #2897FF;
-    --color-C9E6FF-primary-20: #C9E6FF;
-    --color-ECF6FF-primary-10: #ECF6FF;
-    --color-F7FBFF-primary-5: #F7FBFF;
-    --color-ffffff-white: #ffffff;
-    --color-000000-black: #000000;
-    --color-111111-gray-900: #111111;
-    --color-333333-gray-800: #333333;
-    --color-444444-gray-700: #444444;
-    --color-FAFAFA-gray-50: #FAFAFA;
-    --color-FF3F3F-red: #FF3F3F;
+    --color-EC891F-primary: #EC891F;
+    --color-2892D7-secondary: #2892D7;
+    --color-2BAE66-correct: #2BAE66;
+    --color-FCF6F5-light: #FCF6F5;
+    --color-FFFFFF-white: #FFFFFF;
 
     --font-sans-serif: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     --shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.20);
