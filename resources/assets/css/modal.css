@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/*
+	기본정보
+	- 생성일 : 2025-05-12
+	- 파일명 : styles.css
+	- 포함내용 : 모달 컨텐츠
+*/
+
+/* **************************************** *
+ * 로그인
+ * **************************************** */
+.login-logo {
+    margin: 0 auto;
+    height: 48px;
+    width: 48px;
+}
+
+.btn-kakao img {
+    height: var(--ico-16-sm);
+    width: var(--ico-16-sm);
+}
+
+.login-modal .link-group {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8-xxs);
+}
+
+.login-modal .link-group a {
+    color: var(--color-000000-black);
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-400-regular);
+    line-height: calc(var(--font-15-sm) * 1.2);
+    text-decoration: underline;
+}
+
+.login-modal .link-group p {
+    color: var(--color-000000-black);
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-400-regular);
+    line-height: calc(var(--font-15-sm) * 1.2);
+}

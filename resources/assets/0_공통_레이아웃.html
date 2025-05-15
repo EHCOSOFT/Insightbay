@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>공통레이아웃</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- Start : Header -->
+        <header class="header" id="header"></header>
+        <!-- End : Header -->
+
+        <!-- Start : Main -->
+        <main>
+            <section>
+                <div class="container">
+                    <div class="btn-group">
+                        <button type="button" class="open-modal" data-modal-id="loginModal">Modal</button>
+                    </div>
+                </div>
+                <div class="container">
+                    <!-- <div class="input-wrap">
+                        <div class="input-group">
+                            <label for="emailInput00">이메일</label>
+                            <input type="text" id="emailInput00" class="email-input">
+                            <small>이메일 형식이 일치하지 않습니다.</small>
+                        </div>
+                        <div class="input-group">
+                            <label for="pwInput">비밀번호</label>
+                            <div class="input-group-child">
+                                <input type="password" id="pwInput">
+                                <button type="button" class="btn btn-pw-eye">
+                                    <img src="img/ico/i-eye-hide.svg" alt="비밀번호 숨김">
+                                </button>
+                            </div>
+                            <small>비밀번호가 일치하지 않습니다.</small>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+        </main>
+        <!-- End : Main -->
+
+        <!-- Start : Footer -->
+        <footer class="footer" id="footer"></footer>
+        <!-- End : Footer -->
+    </div>
+
+    <!-- <div class="modal-wrap login-modal" id="loginModal">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-ico btn-modal-close">
+                        <img src="img/ico/i-modal-close.svg" alt="모달 닫기">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/logo.svg" alt="인사이트베이 로고" class="login-logo">
+                    <form action="" id="loginForm" class="form-wrap">
+                        <div class="input-wrap">
+                            <div class="input-group">
+                                <label for="emailInput">이메일</label>
+                                <input type="text" id="emailInput" class="email-input">
+                                <small>이메일 형식이 일치하지 않습니다.</small>
+                            </div>
+                            <div class="input-group">
+                                <label for="pwInput">비밀번호</label>
+                                <div class="input-group-child">
+                                    <input type="password" id="pwInput">
+                                    <button type="button" class="btn btn-pw-eye">
+                                        <img src="img/ico/i-eye-hide.svg" alt="비밀번호 숨김">
+                                    </button>
+                                </div>
+                                <small>비밀번호가 일치하지 않습니다.</small>
+                            </div>
+                        </div>
+                        <div class="btn-group column">
+                            <button type="submit" class="btn btn-black btn-login" form="loginForm">로그인</button>
+                            <button type="button" class="btn btn-kakao space-xxs">
+                                <img src="img/ico/i-kakao.svg" alt="카카오 로그인">카카오 로그인</button>
+                        </div>
+                    </form>
+                    <div class="link-group">
+                        <a href="javascript:void(0);">비밀번호 찾기</a>
+                        <div class="link-group-child">
+                            <p>아직 회원이 아니신가요? <a href="javasciprt:void(0);" class="open-modal" data-modal-id="joinModal">회원가입</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="modal-wrap join-modal" id="joinModal">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-ico btn-modal-close">
+                        <img src="img/ico/i-modal-close.svg" alt="모달 닫기">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/logo.svg" alt="인사이트베이 로고" class="login-logo">
+                    <form action="" id="loginForm" class="form-wrap">
+                        <!-- <div class="input-wrap">
+                            <div class="input-group">
+                                <label for="emailInput">이메일</label>
+                                <input type="text" id="emailInput" class="email-input">
+                                <small>이메일 형식이 일치하지 않습니다.</small>
+                            </div>
+                            <div class="input-group">
+                                <label for="pwInput">비밀번호</label>
+                                <div class="input-group-child">
+                                    <input type="password" id="pwInput">
+                                    <button type="button" class="btn btn-pw-eye">
+                                        <img src="img/ico/i-eye-hide.svg" alt="비밀번호 숨김">
+                                    </button>
+                                </div>
+                                <small>비밀번호가 일치하지 않습니다.</small>
+                            </div>
+                        </div>
+                        <div class="btn-group column">
+                            <button type="submit" class="btn btn-black btn-login" form="loginForm">로그인</button>
+                            <button type="button" class="btn btn-kakao space-xxs">
+                                <img src="img/ico/i-kakao.svg" alt="카카오 로그인">카카오 로그인</button>
+                        </div> -->
+                    </form>
+                    <div class="link-group">
+                        <a href="javascript:void(0);">비밀번호 찾기</a>
+                        <div class="link-group-child">
+                            <p>아직 회원이 아니신가요? <a href="#">회원가입</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start : Script -->
+    <script src="lib/jquery.min.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/modal.js"></script>
+    <!-- End : Script -->
+</body>
+
+</html>
