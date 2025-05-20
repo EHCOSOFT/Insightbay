@@ -44,7 +44,7 @@ $(document).ready(function () {
                         <img src="img/ico/i-x.svg" alt="모바일 메뉴 닫기">
                     </button>
                     <ul>
-                        <li><a href="javascript:void(0);">CLASS</a></li>
+                        <li><a href="1_클래스.html">CLASS</a></li>
                         <li><a href="javascript:void(0);">BOOK</a></li>
                         <li><a href="javascript:void(0);">NOTICE</a></li>
                         <li><a href="javascript:void(0);">COMMUNITY</a></li>
@@ -76,8 +76,8 @@ $(document).ready(function () {
                     </address>
                     <ul class="footer-terms">
                         <li>방침</li>
-                        <li><a href="javascript:void(0);">이용약관</a></li>
-                        <li><a href="javascript:void(0);">개인정보취급방침</a></li>
+                        <li><a href="0_이용약관.html">이용약관</a></li>
+                        <li><a href="0_개인정보취급방침.html">개인정보취급방침</a></li>
                     </ul>
                     <div class="footer-cs">
                         <h6>고객센터</h6>
@@ -134,7 +134,7 @@ $(document).ready(function () {
     /* -- 상단 메뉴 클릭 시 .active 토글 -- */
     function initNavbarActive() {
         $(document).on("click", ".navbar > ul > li > a", function (e) {
-            e.preventDefault();
+            // e.preventDefault();
             const $clickedLi = $(this).parent("li");
             $clickedLi.addClass("active").siblings().removeClass("active");
         });

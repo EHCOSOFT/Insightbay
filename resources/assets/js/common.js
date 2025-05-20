@@ -174,7 +174,40 @@ $(document).ready(function () {
 
 
 
+    // ==============================
+    // [메인]
+    // ==============================
+    $(".package-title h2").on("click", function () {
+        const $li = $(this).closest("li");
+        $li.toggleClass("show");
+    });
 
 
+
+
+
+
+    // ==============================
+    // [클래스]
+    // ==============================
+    initTabs(".tab-wrap");
+
+    function initTabs(selector) {
+        $(selector).each(function () {
+            const $tabWrap = $(this);
+            const $tabButtons = $tabWrap.find(".tab-list li");
+            const $tabContents = $tabWrap.find(".tab-content");
+
+            $tabButtons.on("click", function () {
+                const tabId = $(this).data("tab");
+
+                $tabButtons.removeClass("active");
+                $(this).addClass("active");
+
+                $tabContents.removeClass("active");
+                $tabWrap.find("#" + tabId).addClass("active");
+            });
+        });
+    }
 });
 

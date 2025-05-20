@@ -87,6 +87,7 @@
     --color-insta: linear-gradient(0deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
     --color-000000-black: #000000;
     --color-151514-gray-950: #151514;
+    --color-646464-disabled: #646464;
     --color-dimmed: rgba(0, 0, 0, 0.25);
     --font-sans-serif: "NanumSquare", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     --font-lato: 'lato';
@@ -112,7 +113,7 @@
     /* 폰트사이즈 : 최종 버전으로 추후 변수명의 숫자 일괄 삭제 */
     --font-32-2xl: 32px;
     --font-20-xl: 20px;
-    --font-18-lg--font-18-lg: 18px;
+    --font-18-lg: 18px;
     --font-16-md: 16px;
     --font-15-sm: 15px;
     --font-14-xs: 14px;
@@ -983,7 +984,7 @@ textarea {
     }
 }
 
-@media (min-width:1200px) {
+/* @media (min-width:1200px) {
     .footer-info .address p {
         font-size: var(--font-20-xl);
         line-height: calc(var(--font-20-xl) * 1.6);
@@ -1016,7 +1017,7 @@ textarea {
         line-height: calc(var(--font-20-xl) * 1.6);
         text-align: center;
     }
-}
+} */
 
 /* **************************************** *
  * MODAL
@@ -1351,12 +1352,12 @@ textarea {
     }
 }
 
-@media (min-width:1200px) {
+/* @media (min-width:1200px) {
     .product-info h4 {
         font-size: var(--font-title-28-xl);
         line-height: calc(var(--font-title-28-xl) * 1.4);
     }
-}
+} */
 
 
 /* **************************************** *
@@ -1379,4 +1380,100 @@ textarea {
     height: 100%;
     object-fit: cover;
     width: 100%;
+}
+
+/* **************************************** *
+ * Tab
+ * **************************************** */
+.tab-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24-lg);
+}
+
+.tab-list {
+    border-bottom: 1px solid var(--color-FCF6F5-light);
+    display: flex;
+    list-style: none;
+    margin: 0;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.tab-list li {
+    border-bottom: none;
+    color: var(--color-646464-disabled);
+    cursor: pointer;
+    font-family: var(--font-esamanru);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-300-thin);
+    padding: var(--space-12-xs) 0;
+    position: relative;
+}
+
+.tab-list li.active {
+    color: var(--color-FCF6F5-light);
+}
+
+.tab-list li.active::after {
+    background: var(--color-EC891F-primary);
+    bottom: -1px;
+    content: '';
+    display: inline-block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24-lg);
+}
+
+.tab-content h6 {
+    color: var(--color-FCF6F5-light);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-400-regular);
+    line-height: calc(var(--font-14-xs) * 1.2);
+}
+
+@media (min-width:430px) {
+    .tab-list {
+        gap: var(--space-16-sm);
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width:768px) {
+    .tab-list li {
+        font-size: var(--font-16-md);
+    }
+}
+
+@media (min-width:992px) {
+    .tab-wrap {
+        gap: var(--space-40-2xl);
+    }
+
+    .tab-list li {
+        font-size: var(--font-20-xl);
+        flex: 1;
+        text-align: center;
+        padding: var(--space-20-md) 0;
+    }
+
+    .tab-content.active {
+        gap: var(--space-40-2xl);
+    }
+
+    .tab-content h6 {
+        font-size: var(--font-18-lg);
+    }
 }
