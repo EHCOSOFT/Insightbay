@@ -42,13 +42,21 @@
                             <div class="tab-content" id="tab3">탭 3 내용입니다.</div>
                         </div>
                     </div>
-                    <!-- <div class="input-wrap">
+                    <div class="input-wrap">
+                        <!-- 텍스트 필드(기본) -->
                         <div class="input-group">
                             <label for="emailInput00">이메일</label>
                             <input type="text" id="emailInput00" class="email-input">
                             <small>이메일 형식이 일치하지 않습니다.</small>
                         </div>
-                        <div class="input-group">
+                        <!-- 텍스트 필드(불일치) -->
+                        <div class="input-group input-error">
+                            <label for="emailInput00">이메일</label>
+                            <input type="text" id="emailInput00" class="email-input">
+                            <small>이메일 형식이 일치하지 않습니다.</small>
+                        </div>
+                        <!-- 텍스트 필드(불일치) -->
+                        <div class="input-group input-error">
                             <label for="pwInput">비밀번호</label>
                             <div class="input-group-child">
                                 <input type="password" id="pwInput">
@@ -58,7 +66,18 @@
                             </div>
                             <small>비밀번호가 일치하지 않습니다.</small>
                         </div>
-                    </div> -->
+                        <!-- 텍스트 필드(일치) -->
+                        <div class="input-group input-success">
+                            <label for="pwInput">비밀번호</label>
+                            <div class="input-group-child">
+                                <input type="password" id="pwInput">
+                                <button type="button" class="btn btn-pw-eye">
+                                    <img src="img/ico/i-eye-hide.svg" alt="비밀번호 숨김">
+                                </button>
+                            </div>
+                            <small>비밀번호가 일치합니다.</small>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -161,8 +180,9 @@
 
     <!-- Start : Script -->
     <script src="lib/jquery.min.js"></script>
-    <script src="js/component.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/component.js"></script>
     <script src="js/modal.js"></script>
     <!-- End : Script -->
 </body>

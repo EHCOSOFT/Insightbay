@@ -645,6 +645,13 @@
     width: 20px;
 }
 
+.notice-list .notice-info span {
+    color: var(--color-EC891F-primary);
+    font-size: var(--font-16-md);
+    font-family: var(--font-lato);
+    font-weight: var(--font-400-regular);
+}
+
 .notice-list .notice-info a {
     color: var(--color-FCF6F5-light);
     font-size: var(--font-16-md);
@@ -666,6 +673,14 @@
     .notice-list li {
         flex-direction: row;
         padding: var(--space-20-md) 0;
+    }
+
+    .notice-list .notice-info {
+        gap: var(--space-8-xxs);
+    }
+
+    .notice-list .notice-info span {
+        font-size: var(--font-20-xl);
     }
 
     .notice-list .notice-info a {
@@ -703,15 +718,49 @@
  * 클래스
  * **************************************** */
 .sub-sec {
-    padding: var(--space-60-4xl) 0;
+    padding: var(--space-40-2xl) 0;
+}
+
+.sub-sec .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20-md);
+}
+
+.sub-sec .title-group {
+    border-bottom: 2px solid var(--color-FCF6F5-light);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8-xxs);
+    padding: 0 0 var(--space-12-xs) 0;
+}
+
+.sub-sec .title-group h1 {
+    color: var(--color-FCF6F5-light);
+    font-family: var(--font-esamanru);
+    font-size: var(--font-20-xl);
+    font-weight: var(--font-300-thin);
+    line-height: calc(var(--font-20-xl) * 1.2);
 }
 
 @media (min-width:992px) {
     .sub-sec {
-        padding: var(--space-80-5xl) 0;
+        padding: var(--space-60-4xl) 0;
+    }
+
+    .sub-sec .container {
+        gap: var(--space-32-xl);
+    }
+
+    .sub-sec .title-group {
+        padding: 0 0 var(--space-24-lg) 0;
+    }
+
+    .sub-sec .title-group h1 {
+        font-size: var(--font-title-32-2xl);
+        line-height: calc(var(--font-title-32-2xl) * 1.2);
     }
 }
-
 
 /* **************************************** *
  * 이용약관
@@ -834,5 +883,277 @@
 
     .about-text ul li {
         font-size: var(--font-16-md);
+    }
+}
+
+
+/* **************************************** *
+ * 도서
+ * **************************************** */
+.book-group {
+    border: 1px solid var(--color-FCF6F5-light);
+    border-radius: var(--radius-16-lg);
+    display: flex;
+    flex-direction: column;
+}
+
+.book-header {
+    align-items: flex-end;
+    border-bottom: 1px solid var(--color-FCF6F5-light);
+    display: flex;
+    justify-content: center;
+    padding: var(--space-24-lg) 0 0 0;
+}
+
+.book-header img {
+    max-width: 200px;
+    width: 100%;
+}
+
+.book-group .book-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12-xs);
+    padding: var(--space-16-sm);
+}
+
+.book-group .book-title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4-min);
+}
+
+.book-group .book-title h3 {
+    color: var(--color-FCF6F5-light);
+    font-size: var(--font-18-lg);
+    font-weight: var(--font-700-bold);
+    line-height: calc(var(--font-18-lg) * 1.4);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.book-group .book-title h6 {
+    color: var(--color-FCF6F5-light);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-700-bold);
+}
+
+.book-group .book-info .dl-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4-min);
+}
+
+.book-group .book-info .dl-group dl {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12-xs);
+}
+
+.book-group .book-info .dl-group dt {
+    color: var(--color-FCF6F5-light);
+    flex: 0 0 auto;
+    font-size: var(--font-16-md);
+    font-weight: var(--font-700-bold);
+}
+
+.book-group .book-info .dl-group dl dd {
+    color: var(--color-FCF6F5-light);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-500-medium);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (min-width:992px) {
+    .book-group {
+        border-radius: var(--radius-28-3xl);
+    }
+
+    .book-header {
+        padding: var(--space-32-xl) 0 0 0;
+    }
+
+    .book-group .book-title h3 {
+        font-size: var(--font-20-xl);
+        line-height: calc(var(--font-20-xl) * 1.4);
+    }
+
+    .book-group .book-title h6 {
+        font-size: var(--font-16-md);
+    }
+}
+
+@media (min-width:1200px) {
+    .book-group .book-title h3 {
+        font-size: var(--font-title-24-lg);
+        line-height: calc(var(--font-title-24-lg) * 1.4);
+    }
+
+    .book-group .book-title h6 {
+        font-size: var(--font-18-lg);
+    }
+
+    .book-group .book-info {
+        padding: var(--space-20-md) var(--space-24-lg);
+    }
+
+    .book-group .book-info .dl-group dl {
+        gap: var(--space-16-sm);
+    }
+
+    .book-group .book-info .dl-group dt {
+        font-size: var(--font-18-lg);
+    }
+
+    .book-group .book-info .dl-group dd {
+        font-size: var(--font-18-lg);
+    }
+}
+
+/* **************************************** *
+ * 공지사항
+ * **************************************** */
+.notice-wrap .notice-list {
+    border-bottom: 1px solid var(--color-FCF6F5-light);
+}
+
+.notice-wrap .notice-list li {
+    border-color: var(--color-646464-disabled);
+}
+
+.notice-detail-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20-md);
+}
+
+.notice-detail-header {
+    border-bottom: 2px solid var(--color-FCF6F5-light);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4-min);
+    padding: 0 0 var(--space-12-xs) 0;
+}
+
+.notice-detail-header h4 {
+    color: var(--color-FCF6F5-light);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-400-regular);
+    line-height: calc(var(--font-16-md) * 1.4);
+}
+
+.notice-detail-header h6 {
+    color: var(--color-FCF6F5-light);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-300-thin);
+    line-height: calc(var(--font-14-xs) * 1.4);
+}
+
+.notice-detail-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-20-md);
+    min-height: 400px;
+}
+
+.notice-detail-body p {
+    color: var(--color-FCF6F5-light);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-300-thin);
+    line-height: calc(var(--font-14-xs) * 1.5);
+}
+
+.notice-detail-body a {
+    border: 1px solid var(--color-FCF6F5-light);
+    border-radius: var(--radius-full);
+    color: var(--color-FCF6F5-light);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-700-bold);
+    padding: var(--space-8-xxs) var(--space-16-sm);
+    width: max-content;
+}
+
+.notice-detail-footer {
+    border-top: 2px solid var(--color-FCF6F5-light);
+}
+
+.notice-detail-footer ul {
+    border-bottom: 2px solid var(--color-FCF6F5-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.notice-detail-footer ul li {
+    align-items: center;
+    border-bottom: 1px solid var(--color-FCF6F5-light);
+    display: flex;
+    gap: var(--space-8-xxs);
+    padding: var(--space-12-xs) 0;
+}
+
+.notice-detail-footer ul li:last-child {
+    border: 0;
+}
+
+.notice-detail-footer ul li a {
+    color: var(--color-FCF6F5-light);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-300-thin);
+}
+
+.notice-detail-footer ul li span {
+    display: none;
+}
+
+.notice-detail-footer ul li.next img {
+    transform: rotate(180deg);
+}
+
+@media (min-width:992px) {
+    .notice-detail-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 0 var(--space-24-lg) 0;
+    }
+
+    .notice-detail-header h4 {
+        font-size: var(--font-20-xl);
+        line-height: calc(var(--font-20-xl) * 1.4);
+    }
+
+    .notice-detail-header h6 {
+        font-size: var(--font-16-md);
+        line-height: calc(var(--font-16-md) * 1.4);
+    }
+
+    .notice-detail-body p {
+        font-size: var(--font-16-md);
+        line-height: calc(var(--font-16-md) * 1.4);
+    }
+
+    .notice-detail-body a {
+        font-size: var(--font-16-md);
+    }
+
+    .notice-detail-footer ul li {
+        gap: var(--space-12-xs);
+        padding: var(--space-16-sm)
+    }
+
+    .notice-detail-footer ul li a {
+        font-size: var(--font-16-md);
+    }
+
+    .notice-detail-footer ul li span {
+        color: var(--color-FCF6F5-light);
+        font-size: var(--font-16-md);
+        font-weight: var(--font-300-thin);
+        display: block;
+        margin: 0 0 0 auto;
     }
 }

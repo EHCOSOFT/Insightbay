@@ -68,6 +68,14 @@
 }
 
 @font-face {
+    font-family: 'esamanru';
+    font-weight: 300;
+    src: local('esamanru Light'),
+        url(../font/esamanru-Light.woff2) format('woff2'),
+        url(../font/esamanru-Light.woff) format('woff');
+}
+
+@font-face {
     font-family: 'lato';
     font-weight: 900;
     src: local('Lato Black'),
@@ -83,12 +91,16 @@
     --color-FEE500-kakao: #FEE500;
     --color-06C755-naver: #06C755;
     --color-FF0302-youtube: #FF0302;
+    --color-FF2D55-error: #FF2D55;
     --color-FFFFFF-white: #FFFFFF;
+    --color-2BAE66-success: #2BAE66;
     --color-insta: linear-gradient(0deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
     --color-000000-black: #000000;
     --color-151514-gray-950: #151514;
     --color-646464-disabled: #646464;
     --color-dimmed: rgba(0, 0, 0, 0.25);
+    --scrollbar: #EBEBEB;
+    --scrollbar-thumb: #000000;
     --font-sans-serif: "NanumSquare", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     --font-lato: 'lato';
     --font-esamanru: 'esamanru';
@@ -127,7 +139,7 @@
     --font-600-semibold: 600;
     --font-500-medium: 500;
     --font-400-regular: 400;
-    --font-300-thin: 400;
+    --font-300-thin: 300;
 
     /* 여백 : 최종 버전으로 추후 변수명의 숫자 일괄 삭제 */
     --space-200-7xl: 200px;
@@ -167,7 +179,7 @@
 
 @media (min-width:992px) {
     :root {
-        --header-height: 108px;
+        --header-height: 90px;
     }
 }
 
@@ -756,10 +768,6 @@ textarea {
 }
 
 @media (min-width:1200px) {
-    .header-logo a img {
-        height: 72px;
-    }
-
     .navbar ul li a {
         font-size: var(--font-title-22-md);
     }
@@ -1034,7 +1042,7 @@ textarea {
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 102;
+    z-index: 1000;
 }
 
 .modal-wrap.active {
@@ -1058,7 +1066,7 @@ textarea {
     opacity: 0;
     max-height: 90%;
     max-width: 400px;
-    padding: var(--space-20-md);
+    padding: var(--space-20-md) var(--space-12-xs);
     position: relative;
     transform: translateY(-40px);
     text-align: center;
@@ -1136,7 +1144,19 @@ textarea {
 .modal-body {
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    min-height: 60vh;
     gap: var(--space-24-lg);
+    padding: 0 var(--space-4-min) 0 var(--space-8-xxs);
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--scrollbar);
+    border-radius: var(--radius-full);
 }
 
 .modal-body p {
@@ -1153,11 +1173,33 @@ textarea {
 .modal-body .btn-group button {
     border-radius: var(--radius-full);
     font-size: var(--font-15-sm);
-    font-weight: var(--font-400-regular);
+    font-weight: var(--font-700-bold);
     line-height: calc(var(--font-15-sm) * 1.2);
     min-height: 44px;
     padding: var(--space-12-xs) var(--space-16-sm);
     width: 100%;
+}
+
+@media (min-width:992px) {
+    .modal-content {
+        max-width: 740px;
+        padding: var(--space-60-4xl) var(--space-60-4xl);
+    }
+
+    .modal-body {
+        gap: var(--space-48-3xl);
+        padding: 0 var(--space-12-xs) 0 var(--space-20-md);
+    }
+
+    .modal-body .btn-group {
+        gap: var(--space-24-lg);
+    }
+
+    .modal-body .btn-group button {
+        font-size: var(--font-16-md);
+        line-height: 1.2;
+        padding: var(--space-16-sm) var(--space-20-md);
+    }
 }
 
 /* **************************************** *
@@ -1215,7 +1257,15 @@ textarea {
     font-weight: var(--font-400-regular);
     line-height: calc(var(--font-15-sm) * 1.2);
     padding: var(--space-12-xs) var(--space-16-sm);
+    transition: border .5s;
     width: 100%;
+}
+
+.input-group input:hover,
+.input-group input:active,
+.input-group input:focus {
+    border-color: var(--color-EC891F-primary);
+    transition: border .5s;
 }
 
 .input-error input {
@@ -1224,14 +1274,55 @@ textarea {
 
 .input-group small {
     display: none;
-}
-
-.input-group.input-error small {
-    color: var(--color-EC891F-primary);
-    display: block;
     font-size: var(--font-12-min);
     font-weight: var(--font-400-regular);
     line-height: calc(var(--font-12-min) * 1.2);
+}
+
+.input-group.input-error input {
+    border-color: var(--color-FF2D55-error);
+}
+
+.input-group.input-error small {
+    color: var(--color-FF2D55-error);
+    display: block;
+}
+
+.input-group.input-success input {
+    border-color: var(--color-2BAE66-success);
+}
+
+.input-group.input-success small {
+    color: var(--color-2BAE66-success);
+    display: block;
+}
+
+@media (min-width:992px) {
+
+    .form-wrap,
+    .input-wrap {
+        gap: var(--space-24-lg);
+    }
+
+    .input-group {
+        gap: var(--space-8-xxs);
+    }
+
+    .input-group label {
+        font-size: var(--font-16-md);
+        line-height: 1.2;
+    }
+
+    .input-group input {
+        font-size: var(--font-16-md);
+        line-height: 1.2;
+        padding: var(--space-16-sm) var(--space-20-md);
+    }
+
+    .input-group small {
+        font-size: var(--font-14-xs);
+        line-height: 1.2;
+    }
 }
 
 /* **************************************** *
@@ -1475,5 +1566,39 @@ textarea {
 
     .tab-content h6 {
         font-size: var(--font-18-lg);
+    }
+}
+
+
+
+
+/* **************************************** *
+ * Pagination
+ * **************************************** */
+.pagination {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: var(--space-16-sm);
+    margin: var(--space-32-xl) 0 0 0;
+}
+
+.pagination li a {
+    color: var(--color-646464-disabled);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-700-bold);
+}
+
+.pagination li.active a {
+    color: var(--color-FCF6F5-light);
+}
+
+@media (min-width:992px) {
+    .pagination {
+        margin: var(--space-48-3xl) 0 0 0;
+    }
+
+    .pagination li a {
+        font-size: var(--font-20-xl);
     }
 }

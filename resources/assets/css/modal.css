@@ -42,3 +42,19 @@
     font-weight: var(--font-400-regular);
     line-height: calc(var(--font-15-sm) * 1.2);
 }
+
+@media (min-width:992px) {
+    .login-logo {
+        height: 60px;
+        width: 60px;
+    }
+
+    .login-modal .link-group {
+        gap: var(--space-16-sm);
+    }
+
+    .login-modal .link-group a {
+        font-size: var(--font-16-md);
+        line-height: 1.2;
+    }
+}
