@@ -52,7 +52,7 @@ $(document).ready(function () {
                 </nav>
                 <ul class="header-login">
                     <li><a href="javascript:void(0);" class="open-modal" data-modal-id="loginModal">LOG IN</a></li>
-                    <li><a href="javascript:void(0);">JOIN</a><span>신규 가입 2,000P 지급</span></li>
+                    <li><a href="javascript:void(0);" class="open-modal" data-modal-id="joinModal">JOIN</a><span>신규 가입 2,000P 지급</span></li>
                 </ul>
             </div>
         `

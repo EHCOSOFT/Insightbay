@@ -97,7 +97,8 @@
     --color-insta: linear-gradient(0deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
     --color-000000-black: #000000;
     --color-151514-gray-950: #151514;
-    --color-646464-disabled: #646464;
+    --color-8B8B8B-bg-disabled: #8B8B8B;
+    --color-646464-text-disabled: #646464;
     --color-dimmed: rgba(0, 0, 0, 0.25);
     --scrollbar: #EBEBEB;
     --scrollbar-thumb: #000000;
@@ -553,6 +554,13 @@ textarea {
 }
 
 /* **************************************** *
+ * Space
+ * **************************************** */
+.space-xxs {
+    gap: var(--space-8-xxs);
+}
+
+/* **************************************** *
  * Text Color & Point
  * **************************************** */
 .mo {
@@ -580,6 +588,10 @@ textarea {
     display: flex;
 }
 
+.btn-group.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .btn {
     align-items: center;
     border: 0;
@@ -599,10 +611,43 @@ textarea {
     padding: var(--space-4-min);
 }
 
+/* -- 크기별 --*/
+.btn.btn-md {
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-700-bold);
+    padding: var(--space-12-xs) var(--space-16-sm);
+}
+
 /* -- 색상별 --*/
 .btn.btn-black {
     background: var(--color-000000-black);
+    border: 1px solid var(--color-FCF6F5-light);
+    border-radius: var(--radius-full);
     color: var(--color-FFFFFF-white);
+    transition: background-color .3s, border-color .3s;
+}
+
+.btn.btn-black:disabled {
+    background: var(--color-8B8B8B-bg-disabled);
+    border-color: var(--color-8B8B8B-bg-disabled);
+    color: var(--color-646464-text-disabled);
+}
+
+.btn.btn-black:disabled:hover,
+.btn.btn-black:disabled:active,
+.btn.btn-black:disabled:focus {
+    background: var(--color-8B8B8B-bg-disabled);
+    border-color: var(--color-8B8B8B-bg-disabled);
+    color: var(--color-646464-text-disabled);
+}
+
+.btn.btn-black:hover,
+.btn.btn-black:active,
+.btn.btn-black:focus {
+    background: var(--color-EC891F-primary);
+    border-color: var(--color-EC891F-primary);
+    color: var(--color-FFFFFF-white);
+    transition: background-color .3s, border-color .3s;
 }
 
 .btn.btn-kakao {
@@ -610,6 +655,13 @@ textarea {
     color: var(--color-000000-black);
 }
 
+@media (min-width:992px) {
+    .btn.btn-md {
+        font-size: var(--font-16-md);
+        line-height: 1.2;
+        padding: var(--space-16-sm) var(--space-32-xl);
+    }
+}
 
 /* **************************************** *
  * Header
@@ -1104,26 +1156,22 @@ textarea {
     }
 }
 
-/* 
+
 .modal-header {
     align-items: center;
     background: var(--color-ffffff-white);
     display: flex;
     justify-content: center;
-    padding: var(--space-16-sm) var(--space-24-lg);
+    padding: 0 0 var(--space-16-sm)0;
     position: sticky;
     top: 0;
 }
 
-.modal-header.vertical {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 4px;
+.modal-title {
+    color: var(--color-000000-black);
+    font-size: var(--font-18-lg);
+    font-weight: var(--font-700-bold);
 }
-
-.modal-header h5 {
-    text-align: left;
-} */
 
 .btn-modal-close {
     align-items: center;
@@ -1132,8 +1180,8 @@ textarea {
     display: flex;
     padding: 0;
     position: absolute;
-    top: var(--space-20-md);
-    right: var(--space-20-md);
+    top: 0;
+    right: var(--space-8-xxs);
 }
 
 .btn-modal-close img {
@@ -1145,7 +1193,7 @@ textarea {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    min-height: 60vh;
+    max-height: 70vh;
     gap: var(--space-24-lg);
     padding: 0 var(--space-4-min) 0 var(--space-8-xxs);
 }
@@ -1157,6 +1205,13 @@ textarea {
 .modal-body::-webkit-scrollbar-thumb {
     background: var(--scrollbar);
     border-radius: var(--radius-full);
+}
+
+.modal-body h4 {
+    color: var(--color-000000-black);
+    font-size: var(--font-16-md);
+    font-weight: var(--font-700-bold);
+    line-height: calc(var(--font-16-md) * 1.4);
 }
 
 .modal-body p {
@@ -1186,9 +1241,23 @@ textarea {
         padding: var(--space-60-4xl) var(--space-60-4xl);
     }
 
+    .modal-title {
+        font-size: var(--font-title-24-lg);
+    }
+
+    .btn-modal-close img {
+        height: var(--ico-32-2xl);
+        width: var(--ico-32-2xl);
+    }
+
     .modal-body {
         gap: var(--space-48-3xl);
         padding: 0 var(--space-12-xs) 0 var(--space-20-md);
+    }
+
+    .modal-body h4 {
+        font-size: var(--font-title-24-lg);
+        line-height: calc(var(--font-title-24-lg) * 1.4);
     }
 
     .modal-body .btn-group {
@@ -1196,7 +1265,7 @@ textarea {
     }
 
     .modal-body .btn-group button {
-        font-size: var(--font-16-md);
+        font-size: var(--font-18-lg);
         line-height: 1.2;
         padding: var(--space-16-sm) var(--space-20-md);
     }
@@ -1225,16 +1294,39 @@ textarea {
     width: 100%;
 }
 
+.input-group.input-hidden {
+    display: none;
+}
+
 .input-group-child {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8-xxs);
     position: relative;
     width: 100%;
 }
 
-.input-group-child .btn {
+.input-group-child .btn-pw-eye {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: var(--space-16-sm);
+}
+
+.input-group-child .btn-flex {
+    flex: 0 0 auto;
+}
+
+.input-group-child .cer-time {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: var(--space-16-sm);
+}
+
+.input-group-child .cer-time.show {
+    display: block;
 }
 
 .input-group-child img {
@@ -1297,6 +1389,13 @@ textarea {
     display: block;
 }
 
+.input-group p {
+    font-size: var(--font-12-min);
+    font-weight: var(--font-400-regular);
+    line-height: calc(var(--font-12-min) * 1.2);
+    text-align: left;
+}
+
 @media (min-width:992px) {
 
     .form-wrap,
@@ -1319,9 +1418,110 @@ textarea {
         padding: var(--space-16-sm) var(--space-20-md);
     }
 
-    .input-group small {
+    .input-group small,
+    .input-group p {
         font-size: var(--font-14-xs);
         line-height: 1.2;
+    }
+}
+
+/* checkbox */
+.check-group {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8-xxs);
+}
+
+.check-group input {
+    display: none;
+}
+
+.check-group label::before {
+    background: url(../img/ico/i-checkbox.svg);
+    background-size: cover;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.check-group.black label {
+    align-items: center;
+    color: var(--color-000000-black);
+    display: flex;
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-400-regular);
+    gap: var(--space-8-xxs);
+}
+
+.check-group.black label::before {
+    background: url(../img/ico/i-checkbox-black.svg);
+    background-size: cover !important;
+}
+
+.check-group.black input:checked+label::before {
+    background: url(../img/ico/i-checkbox-black-checked.svg);
+}
+
+.check-terms-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16-sm);
+}
+
+@media (min-width:992px) {
+    .check-group label::before {
+        height: 24px;
+        width: 24px;
+    }
+
+    .check-group.black label {
+        font-size: var(--font-16-md);
+        line-height: 1.2;
+    }
+}
+
+/* terms */
+.terms-group {
+    border: 1px solid var(--color-000000-black);
+    border-radius: var(--radius-8-sm);
+    padding: var(--space-4-min);
+}
+
+.terms-group .terms-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16-sm);
+    overflow-y: scroll;
+    height: 120px;
+    padding: var(--space-4-min);
+}
+
+.terms-group .terms-content::-webkit-scrollbar {
+    background: var(--scrollbar);
+    border-radius: var(--radius-full);
+    width: 8px;
+}
+
+.terms-group .terms-content::-webkit-scrollbar-thumb {
+    background: var(--color-000000-black);
+    border-radius: var(--radius-full);
+}
+
+.terms-group .terms-content p {
+    color: var(--color-000000-black);
+    font-size: var(--font-14-xs);
+    font-weight: var(--font-400-regular);
+    text-align: left;
+}
+
+@media (min-width:992px) {
+    .terms-group .terms-content {
+        height: 200px;
+    }
+
+    .terms-group .terms-content p {
+        font-size: var(--font-16-md);
     }
 }
 
@@ -1493,7 +1693,7 @@ textarea {
 
 .tab-list li {
     border-bottom: none;
-    color: var(--color-646464-disabled);
+    color: var(--color-646464-text-disabled);
     cursor: pointer;
     font-family: var(--font-esamanru);
     font-size: var(--font-14-xs);
@@ -1584,7 +1784,7 @@ textarea {
 }
 
 .pagination li a {
-    color: var(--color-646464-disabled);
+    color: var(--color-646464-text-disabled);
     font-size: var(--font-16-md);
     font-weight: var(--font-700-bold);
 }

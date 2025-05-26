@@ -174,6 +174,21 @@ $(document).ready(function () {
 
 
 
+
+
+    // ==============================
+    // [회원가입]
+    // ==============================
+    /* -- 체크박스 전체 선택 -- */
+    $(document).on("change", ".check-all", function () {
+        const isChecked = $(this).is(":checked");
+        $(".check-target").prop("checked", isChecked);
+    });
+
+
+
+
+
     // ==============================
     // [메인]
     // ==============================

@@ -718,7 +718,7 @@
  * 클래스
  * **************************************** */
 .sub-sec {
-    padding: var(--space-40-2xl) 0;
+    padding: var(--space-32-xl) 0;
 }
 
 .sub-sec .container {
@@ -745,7 +745,7 @@
 
 @media (min-width:992px) {
     .sub-sec {
-        padding: var(--space-60-4xl) 0;
+        padding: var(--space-40-2xl) 0;
     }
 
     .sub-sec .container {
@@ -1022,7 +1022,7 @@
 }
 
 .notice-wrap .notice-list li {
-    border-color: var(--color-646464-disabled);
+    border-color: var(--color-646464-text-disabled);
 }
 
 .notice-detail-wrap {
