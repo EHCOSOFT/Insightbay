@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>인사이트베이</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="wrap mypage">
+        <!-- Start : Header -->
+        <header class="header" id="header">
+        </header>
+        <!-- End : Header -->
+
+        <!-- Start : Main -->
+        <main>
+            <section class="sub-sec">
+                <div class="container">
+                    <div class="mypage-wrap">
+
+                        <div class="mypage-lnb">
+                            <ul>
+                                <li><a href="0_마이페이지.html">내 강의</a></li>
+                                <li class="active"><a href="0_마이페이지_내포인트.html">내 포인트</a></li>
+                                <li><a href="0_마이페이지_결제대기강의.html">결제 대기 강의</a></li>
+                                <li><a href="0_마이페이지_회원정보수정.html">회원 정보 수정</a></li>
+                            </ul>
+                            <a href="javasciprt:void(0);" class="lnb-logout">로그아웃</a>
+                        </div>
+                        <div class="mypage-content">
+                            <form action="" class="mypage-form">
+                                <h3 class="form-title">회원 정보</h3>
+                                <div class="input-wrap">
+                                    <div class="input-group input-white">
+                                        <label for="emailInput">이메일</label>
+                                        <input type="text" value="info@gmail.com" id="emailInput">
+                                    </div>
+                                    <div class="input-group input-white">
+                                        <label for="pwInput">비밀번호</label>
+                                        <div class="input-group-child">
+                                            <input type="password" id="pwInput" value="1231231321">
+                                            <button type="button" class="btn btn-md btn-black btn-flex open-modal" data-modal-id="alertModal01">변경</button>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-white">
+                                        <label for="pwInput" class="label-hidden">비밀번호</label>
+                                        <div class="input-group-child">
+                                            <input type="password" id="pwInput" placeholder="새로운 비밀번호를 입력하세요.">
+                                            <button type="button" class="btn btn-pw-eye">
+                                                <img src="img/ico/i-eye-hide.svg" alt="비밀번호 숨김">
+                                            </button>
+                                        </div>
+                                        <p>영어 대-소문자/숫자/특수문자 중 2가지 이상 조합, 8자 이상</p>
+                                    </div>
+                                    <div class="input-group input-error">
+                                        <label for="pwInput" class="label-hidden">비밀번호 확인</label>
+                                        <div class="input-group-child">
+                                            <input type="password" id="pwInput" placeholder="한 번 더 입력해주세요.">
+                                            <button type="button" class="btn btn-md btn-black btn-flex">변경</button>
+                                        </div>
+                                        <small>비밀번호가 일치하지 않습니다.</small>
+                                    </div>
+                                    <div class="input-group input-white">
+                                        <label for="phoneNumber">휴대전화</label>
+                                        <div class="input-group-child">
+                                            <input type="text" value="010-0000-0000" id="phoneNumber">
+                                            <button type="button" class="btn btn-md btn-black btn-flex">변경</button>
+                                        </div>
+                                    </div>
+                                    <div class="input-group input-white input-error">
+                                        <label for="phoneNumberChange" class="label-hidden">휴대전화</label>
+                                        <div class="input-group-child">
+                                            <input type="text" id="phoneNumberChange" placeholder="- 없이 입력해주세요.">
+                                            <button type="button" class="btn btn-md btn-black btn-flex"
+                                                disabled>전송</button>
+                                        </div>
+                                        <small>규칙에 맞는 휴대폰 번호를 입력해주세요.</small>
+                                    </div>
+                                    <div class="input-group input-error">
+                                        <label for="certificationNumber" class="label-hidden">인증번호</label>
+                                        <div class="input-group-child">
+                                            <div class="input-group-child">
+                                                <input type="number" id="certificationNumber"
+                                                    placeholder="인증번호를 입력하세요.">
+                                                <span class="cer-time show">02:35</span>
+                                            </div>
+                                            <button type="button" class="btn btn-md btn-black btn-flex"
+                                                disabled>변경</button>
+                                        </div>
+                                        <small>올바른 인증번호를 입력해주세요.</small>
+                                    </div>
+                                </div>
+                                <div class="btn-group space-xxs">
+                                    <button type="submit" class="btn btn-lg btn-black" disabled>저장하기</button>
+                                    <button type="button" class="btn btn-lg btn-kakao space-xxs"><img
+                                            src="img/ico/i-kakao.svg" alt="카카오 로그인">카카오 연동하기</button>
+                                    <a href="javasciprt:void(0);" class="open-modal"
+                                        data-modal-id="secessionModal01">탈퇴하기</a>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- End : Main -->
+
+        <!-- Start : Footer -->
+        <footer class="footer" id="footer"></footer>
+        <!-- End : Footer -->
+    </div>
+
+
+    <!-- 카카오 가입 비밀번호 변경 -->
+    <div class="modal-wrap join-modal" id="alertModal01">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-ico btn-modal-close">
+                        <img src="img/ico/i-modal-close.svg" alt="모달 닫기">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>SNS 계정으로 가입하신 경우,<br>
+                        비밀번호가 존재하지 않습니다.</h4>
+                    <div class="btn-group">
+                        <button type="type" class="btn btn-black btn-modal-close">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 탈퇴 모달 -->
+    <div class="modal-wrap secession-modal" id="secessionModal01">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-ico btn-modal-close">
+                        <img src="img/ico/i-modal-close.svg" alt="모달 닫기">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="secession-msg">
+                        <img src="img/owl-01.svg" alt="캐릭터" class="secession-img">
+                        <h3>정말 탈퇴하실 건가요?</h3>
+                        <h5>탈퇴 후에는 강의와 도서를<br>
+                            더 이상 볼 수 없어요..괜찮으신가요?</h5>
+                    </div>
+                    <div class="btn-group">
+                        <button type="type" class="btn btn-black btn-modal-close">안할래요.</button>
+                        <button type="type" class="btn btn-black btn-gray open-modal"
+                            data-modal-id="secessionModal02">괜찮아요.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 탈퇴 재확인 모달 -->
+    <div class="modal-wrap secession-modal" id="secessionModal02">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-ico btn-modal-close">
+                        <img src="img/ico/i-modal-close.svg" alt="모달 닫기">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="secession-msg">
+                        <img src="img/owl-02.svg" alt="캐릭터" class="secession-img">
+                        <h3>탈퇴 완료 후에는 계정이 삭제되며,<br>
+                            복구할 수 없습니다.</h3>
+                        <div class="check-group black">
+                            <input type="checkbox" id="check01">
+                            <label for="check01">네, 확인했습니다.</label>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="type" class="btn btn-black btn-modal-close">탈퇴하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start : Script -->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/modal.js"></script>
+    <!-- End : Script -->
+
+</body>
+
+</html>

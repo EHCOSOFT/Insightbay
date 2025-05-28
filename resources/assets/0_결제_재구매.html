@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>인사이트베이</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+        <!-- Start : Header -->
+        <header class="header" id="header">
+        </header>
+        <!-- End : Header -->
+
+        <!-- Start : Main -->
+        <main>
+            <section class="sub-sec">
+                <div class="container">
+                    <div class="payment-group">
+                        <h3>주문/결제</h3>
+                        <div class="payment-product-info">
+                            <h3>상품 정보</h3>
+                            <div class="product-info-list">
+                                <div class="product-info-list-header">
+                                    <h4>케이스인포인트</h4>
+                                    <button type="button" class="btn-product-toggle">
+                                        <img src="img/ico/i-dropdown.svg" alt="열기/닫기">
+                                    </button>
+                                </div>
+                                <ul>
+                                    <li>인턴 초격차 합격 패키지
+                                        <ul>
+                                            <li>Resume 가이드</li>
+                                            <li>Guesstimation 가이드</li>
+                                            <li>커뮤니케이션 강의</li>
+                                            <li>컨설팅 리서치 노하우 강의</li>
+                                            <li>전략 Excel 강의</li>
+                                        </ul>
+                                    </li>
+                                    <li>컨설팅커리어바이블</li>
+                                </ul>
+                            </div>
+                            <ul class="desc">
+                                <li>My page에서 종이책의 배송 상태, E-Book 다운로드, 강의 수강이 가능합니다.</li>
+                                <li>E-Book의 경우, 환불은 불가합니다.</li>
+                                <li>강의 자료는 강의실 내에서 다운로드 가능합니다.</li>
+                            </ul>
+                        </div>
+                        <div class="payment-user-info">
+                            <h3>회원 정보</h3>
+                            <div class="dl-group">
+                                <dl>
+                                    <dt>이름</dt>
+                                    <dd>이수연</dd>
+                                </dl>
+                                <dl>
+                                    <dt>이메일</dt>
+                                    <dd>sooyeon@insightbay.co.kr</dd>
+                                </dl>
+                                <dl>
+                                    <dt>휴대전화</dt>
+                                    <dd>010-9605-4050</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-delivery-address payment-phone">
+                            <h3>포인트</h3>
+                            <div class="input-wrap">
+                                <div class="input-group input-white">
+                                    <p>사용 가능 포인트 : 52,000P</p>
+                                    <label for="" class="label-hidden">포인트</label>
+                                    <div class="input-group-child">
+                                        <input type="text" placeholder="1,000P 단위 입력">
+                                        <button type="button" class="btn btn-md btn-black btn-flex">전액 사용</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-total-info">
+                            <h3>결제 정보</h3>
+                            <div class="dl-group">
+                                <dl>
+                                    <dt>주문 상품 <br class="mo"><span>케이스인포인트 외 2건</span></dt>
+                                    <dd>610,000원</dd>
+                                </dl>
+                                <dl>
+                                    <dt>할인 <br class="mo"><span>4월 개강할인 15%</span></dt>
+                                    <dd>-120,000원</dd>
+                                </dl>
+                                <dl>
+                                    <dt>포인트</dt>
+                                    <dd>-1,000P</dd>
+                                </dl>
+                            </div>
+                            <div class="final-payment-amount">
+                                <div class="area">
+                                    <h4>최종 결제 금액</h4>
+                                    <h4>480,000원</h4>
+                                </div>
+                                <div class="area">
+                                    <h4>월 결제 금액 <br class="mo"><span>12개월 무이자 할부 시</span></h4>
+                                    <h4>40,000원</h4>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>이후 결제 과정에서 나오는 무이자 할부이며, 할부 이자는 100% 아이컨이 부담합니다.</li>
+                                <li>현재 신용카드만 할부 결제 가능</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn-payment" disabled>결제하기</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- End : Main -->
+
+        <!-- Start : Footer -->
+        <footer class="footer" id="footer"></footer>
+        <!-- End : Footer -->
+    </div>
+
+    <!-- 결제창 나가기 -->
+    <div class="modal-wrap secession-modal" id="alertModal02">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-ico btn-modal-close">
+                        <img src="img/ico/i-modal-close.svg" alt="모달 닫기">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="secession-msg">
+                        <h3>입력된 정보는 삭제됩니다.<br>
+                            결제를 진행하지 않고 나가시겠습니까?</h3>
+                    </div>
+                    <div class="btn-group">
+
+                        <button type="type" class="btn btn-black btn-gray">네</button>
+                        <button type="type" class="btn btn-black btn-modal-close">아니오</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start : Script -->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/modal.js"></script>
+    <!-- End : Script -->
+
+</body>
+
+</html>

@@ -224,5 +224,41 @@ $(document).ready(function () {
             });
         });
     }
+
+
+
+
+
+    // ==============================
+    // [클래스 상세페이지]
+    // ==============================
+    $('.product-detail-nav li a').on('click', function (e) {
+        e.preventDefault(); // 기본 앵커 이동 막기
+
+        // 1️⃣ li.active 처리
+        $('.product-detail-nav li').removeClass('active');
+        $(this).parent('li').addClass('active');
+
+        // 2️⃣ 연결된 섹션으로 부드럽게 스크롤 이동
+        var targetId = $(this).attr('href');
+        var targetOffset = $(targetId).offset().top;
+
+        $('html, body').animate({
+            scrollTop: targetOffset
+        }, 500); // 500ms에 부드럽게 이동
+    });
+
+
+
+    // ==============================
+    // [결제]
+    // ==============================
+    $('.btn-product-toggle').on('click', function () {
+        const $wrap = $(this).closest('.product-info-list');
+        const $targetUl = $wrap.find('ul').first(); // 첫 번째 ul만 열고 닫음
+
+        $targetUl.toggleClass('show');         // ul 열고 닫기
+        $(this).toggleClass('active');         // 버튼 active 스타일 처리
+    });
 });
 

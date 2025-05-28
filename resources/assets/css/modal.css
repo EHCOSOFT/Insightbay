@@ -58,3 +58,36 @@
         line-height: 1.2;
     }
 }
+
+/* **************************************** *
+ * 탈퇴 모달
+ * **************************************** */
+.secession-img {
+    height: 120px;
+    width: 120px;
+}
+
+.secession-msg {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16-sm);
+}
+
+.secession-msg h3 {
+    font-size: var(--font-18-lg);
+    font-weight: var(--font-700-bold);
+}
+
+.secession-msg h5 {
+    font-size: var(--font-15-sm);
+    font-weight: var(--font-400-regular);
+}
+
+.secession-modal .btn-group {
+    flex-direction: row;
+}
+
+.secession-modal .btn-group .btn-gray {
+    background: #747474;
+}
