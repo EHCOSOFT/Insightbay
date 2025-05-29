@@ -1013,6 +1013,10 @@
     gap: var(--space-8-xxs);
 }
 
+.product-detail-footer .right {
+    margin: 0 0 0 auto;
+}
+
 .product-detail-footer h2 span {
     color: var(--color-646464-text-disabled);
     font-size: var(--font-14-xs);
@@ -1759,13 +1763,12 @@
 }
 
 .table-wrap {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    /* overflow-x: auto;
+    -webkit-overflow-scrolling: touch; */
 }
 
 .table-wrap table {
     border-collapse: collapse;
-    min-width: 400px;
     width: 100%;
 }
 
@@ -1786,9 +1789,21 @@
     text-align: center;
 }
 
+.table-wrap table tr td.left {
+    text-align: left;
+}
+
+.table-wrap table tr td:last-child {
+    text-align: right;
+}
+
+.table-wrap table tr td:last-child .btn-group.center {
+    justify-content: flex-end;
+}
+
 .download-info {
     color: var(--color-FCF6F5-light);
-    font-size: var(--font-12-min);
+    font-size: 10px;
     font-weight: var(--font-300-thin);
 }
 
@@ -1813,6 +1828,14 @@
     font-size: var(--font-14-xs);
     font-weight: var(--font-400-regular);
     text-decoration: underline;
+}
+
+@media (min-width:768px) {
+
+    .table-wrap table tr td.pc,
+    .table-wrap table tr th.pc {
+        display: table-cell;
+    }
 }
 
 @media (min-width:992px) {
@@ -1886,6 +1909,7 @@
         padding: var(--space-16-sm);
     }
 
+
     .download-info {
         font-size: var(--font-14-xs);
     }
@@ -1942,9 +1966,19 @@
 }
 
 .mypage-form .form-title {
+    align-items: center;
     color: var(--color-FCF6F5-light);
+    display: flex;
     font-size: var(--font-18-lg);
     font-weight: var(--font-700-bold);
+    justify-content: space-between;
+}
+
+.mypage-form .form-title a {
+    color: var(--color-8B8B8B-bg-disabled);
+    font-size: var(--font-14-xs);
+    font-weight: 400;
+    text-decoration: underline;
 }
 
 .mypage-form .btn-group {
@@ -1964,6 +1998,10 @@
 @media (min-width:992px) {
     .mypage-form .input-wrap {
         max-width: 648px;
+    }
+
+    .mypage-form .form-title a {
+        display: none;
     }
 
     .mypage-form .btn-group {
@@ -2830,8 +2868,7 @@
         flex-direction: row;
     }
 
-    .video-group {
-    }
+    .video-group {}
 
     .lecture-list {
         min-width: 300px;
