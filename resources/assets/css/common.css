@@ -1863,8 +1863,15 @@ textarea {
     margin: var(--space-32-xl) 0 0 0;
 }
 
+.pagination li {
+    align-items: center;
+    display: flex;
+}
+
 .pagination li a {
+    align-items: center;
     color: var(--color-646464-text-disabled);
+    display: flex;
     font-size: var(--font-16-md);
     font-weight: var(--font-700-bold);
 }
