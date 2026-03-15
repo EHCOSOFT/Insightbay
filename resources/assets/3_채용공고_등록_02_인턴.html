@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>인사이트베이</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+        <!-- Start : Header -->
+        <header class="header" id="header">
+        </header>
+        <!-- End : Header -->
+
+        <!-- Start : Main -->
+        <main>
+            <section class="sub-sec">
+                <div class="container">
+                    <div class="title-group">
+                        <h1>채용공고 등록하기</h1>
+                    </div>
+                    <div class="job-detail">
+                        <div class="job-header">
+                            <h2>공통항목</h2>
+                        </div>
+                        <div class="job-input">
+                            <div class="input-wrap">
+                                <div class="input-group input-white">
+                                    <label for="jobTitle">공고 제목<span>*</span></label>
+                                    <input type="text" placeholder="25자 이내로 작성해주세요. 예시)컨설팅 프로젝트 RA 모집 공고" id="jobTitle">
+                                </div>
+                                <div class="input-group input-white">
+                                    <label for="jobDescription">주요 업무<span>*</span></label>
+                                    <div class="text-group">
+                                        <textarea name="jobDescription" id="jobDescription"></textarea>
+                                        <p class="count"><span>0</span> / 500</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="input-wrap">
+                                <div class="input-group input-white">
+                                    <label>고용형태<span>*</span></label>
+                                    <div class="radio-group-wrap">
+                                        <div class="radio-group black">
+                                            <input type="radio" name="employmentType" id="typeIntern">
+                                            <label for="typeIntern">인턴/RA</label>
+                                        </div>
+                                        <div class="radio-group black">
+                                            <input type="radio" name="employmentType" id="typeContract">
+                                            <label for="typeContract">계약직</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group input-white">
+                                    <label for="salary">급여<span>*</span></label>
+                                    <input type="text" placeholder="시급 12,000원" id="salary">
+                                    <div class="check-group">
+                                        <input type="checkbox" id="salaryNegotiable">
+                                        <label for="salaryNegotiable">면접 후 결정</label>
+                                    </div>
+                                </div>
+                                <div class="input-group input-white">
+                                    <label for="location">근무지<span>*</span></label>
+                                    <input type="text" placeholder="서울시 용산구, 신용산역 근처" id="location">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="input-wrap">
+                                <div class="input-group input-white">
+                                    <label for="deadline">접수기간<span>*</span></label>
+                                    <input type="date" placeholder="2026-02-15" id="deadline">
+                                </div>
+                                <div class="input-group input-white">
+                                    <label for="contactEmail">접수 이메일<span>*</span></label>
+                                    <input type="text" placeholder="email@yourname.com" id="contactEmail">
+                                </div>
+                                <div class="input-group input-white radio-group-wrap">
+                                    <label>정보 수집 동의<span>*</span></label>
+                                    <div class="radio-group black">
+                                        <input type="radio" id="agreeTerms">
+                                        <label for="agreeTerms">(필수) 담당자의 개인정보 수집 및 이용에 동의합니다.</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-detail">
+                        <div class="job-header">
+                            <h2 class="center">글 작성 에디터</h2>
+                        </div>
+
+                    </div>
+
+                    <div class="job-detail">
+                        <div class="job-header">
+                            <h2>프로모션으로 할인받기</h2>
+                        </div>
+                        <div class="promtion">
+                            <div class="radio-group">
+                                <input type="radio" id="promtion01" name="promtion">
+                                <label for="promtion01">
+                                    <h3>무료 등록 <br class="pc">(100% 할인)</h3>
+                                    <p>공고 등록 시, 우대사항 항목에 아래 문구를 추가하면 무료로 등록됩니다.<br><span>우대사항 : 아이컨 [강의명] 수강자 우대</span>
+                                    </p>
+                                </label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" id="promtion02" name="promtion">
+                                <label for="promtion02">
+                                    <h3>추가 할인 <br class="pc">
+                                        (10% 할인)</h3>
+                                    <p>추천 강의를 선택하면 공고 등록 비용이 10% 추가 할인됩니다.<br>
+                                        *선택한 추천 강의는 <span>[기업명]이 추천한 강의</span>라는 이름으로 채용공고 하단에 노출됩니다.</p>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="class-select">
+                            <h4><span>총 3개</span>의 추천 강의 선택이 가능합니다.</h4>
+                            <ul>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect01">
+                                        <label for="classSelect01">전략 PPT 강의</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect02">
+                                        <label for="classSelect02">실전 Valuation 강의</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect03">
+                                        <label for="classSelect03">Healthcare 이해와 전략</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect04">
+                                        <label for="classSelect04">전략 Excel 강의</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect05">
+                                        <label for="classSelect05">PE 이해와 전략</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect06">
+                                        <label for="classSelect06">High Tech 이해와 전략</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect07">
+                                        <label for="classSelect07">컨설팅 리서치 강의</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect08">
+                                        <label for="classSelect08">IB 이해와 전략</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect09">
+                                        <label for="classSelect09">Global Energy 이해와 전략</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect10">
+                                        <label for="classSelect10">전략 재무 강의</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect11">
+                                        <label for="classSelect11">주니어를 위한 커뮤니케이션 비법</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect12">
+                                        <label for="classSelect12">은행업의 이해와 전략</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect13">
+                                        <label for="classSelect13">카드업의 이해와 전략</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-group">
+                                        <input type="checkbox" id="classSelect14">
+                                        <label for="classSelect14">보험업의 이해와 전략</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="job-detail">
+                        <div class="job-header">
+                            <h2>공고 확장 플랫폼 선택</h2>
+                        </div>
+                        <div class="ad-expand">
+                            <div class="check-group">
+                                <input type="checkbox" id="platformIcon" checked>
+                                <label for="platformIcon">
+                                    <img src="../assets/img/ico/i-icon.svg" alt="카페 아이컨">
+                                    <div class="platform">
+                                        <h4>카페 아이컨</h4>
+                                        <p>초고스펙 5만명 이상</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="check-group">
+                                <input type="checkbox" id="platformLinkedin" checked>
+                                <label for="platformLinkedin">
+                                    <img src="../assets/img/ico/i-linkedin.svg" alt="링크드인">
+                                    <div class="platform">
+                                        <h4>링크드인</h4>
+                                        <p>아이컨의 전문가 네트워크</p>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="check-group">
+                                <input type="checkbox" id="platformInsta" checked>
+                                <label for="platformInsta">
+                                    <img src="../assets/img/ico/i-insta.svg" alt="인스타">
+                                    <div class="platform">
+                                        <h4>인스타</h4>
+                                        <p>노출 효과 최고</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="job-detail">
+                        <div class="job-header">
+                            <h2>공고 등록 전에 확인해주세요!</h2>
+                        </div>
+                        <ul class="job-save-info">
+                            <li>신규 담당자로 등록 시 채용정보 진행을 위하여 지원 이메일 주소를 수집 및 이용합니다.</li>
+                            <li>최저임금을 준수하지 않는 경우, 공고 강제 마감 및 행정처분을 받을 수 있습니다.</li>
+                            <li>채용절차 공정화 법상 금지되는 개인 정보를 요구하는 경우, 공고 강제 마감 및 행정처분을 받을 수 있습니다.</li>
+                            <li>모집・채용에서 남녀를 차별하거나, 여성근로자를 채용할 때 직무 수행에 불필요한 조건을 제시 또는 요구하는 경우 남녀 고용 평등과 일가정 양립 지원에 관한 법률
+                                위반에 따른 500만원 이하의 벌금 부과 및 공고 강제 마감이 될 수 있습니다.</li>
+                            <li>모집·채용에서 불합리한 연령 제한 시 고용상 연령 차별 금지 및 고령자 고용 촉진에 관한 법률 위반에 따른 500만원 이하의 벌금 부과 및 공고 강제 마감이
+                                될 수 있습니다.</li>
+                            <li>잘못 입력된 담당자 연락처로 개인정보 발송 시 개인정보 유출 및 스팸 신고로 인해 소명이 필요할 수 있으며, 이에 대한 책임은 기업에 있습니다.</li>
+                            <li>채용정보 정책에 위배될 경우, 공고가 게재되지 않을 수 있습니다. 채용절차 준수 '자동통지/파기' 시스템 공고등록 제한 규정안내</li>
+                            <li>더 많은 후보자에게 노출될 수 있도록 공고의 자격요건에 맞는 특화 서비스에 추가 게재될 수 있습니다.</li>
+                            <li>근무지가 해외사업장인 경우 근로조건(근무지, 처우, 연락처 등)을 명확히 기재해야 합니다.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-ad-total">
+                        <div class="ad-total-detail">
+                            <dl>
+                                <dt>인턴/RA/계약직 채용공고</dt>
+                                <dd>300,000</dd>
+                            </dl>
+                            <dl>
+                                <dt>우대 사항 무료 등록</dt>
+                                <dd>100% 할인</dd>
+                            </dl>
+                        </div>
+                        <div class="ad-total-sum">
+                            <dl>
+                                <dt>합계</dt>
+                                <dd>300,000</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="btn-group job-add-btn">
+                        <button type="button" class="btn btn-lg btn-white">임시 저장</button>
+                        <button type="button" class="btn btn-lg btn-primary">공고 등록하기</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- End : Main -->
+
+        <!-- Start : Footer -->
+        <footer class="footer" id="footer"></footer>
+        <!-- End : Footer -->
+    </div>
+
+
+
+    <!-- Start : Script -->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/new.js"></script>
+    <!-- End : Script -->
+
+</body>
+
+</html>

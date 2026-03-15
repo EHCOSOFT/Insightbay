@@ -47,7 +47,7 @@ $(document).ready(function () {
                         <li><a href="1_클래스.html">CLASS</a></li>
                         <li><a href="1_도서.html">BOOK</a></li>
                         <li><a href="1_공지사항.html">NOTICE</a></li>
-                        <li><a href="javascript:void(0);">COMMUNITY</a></li>
+                        <li><a href="2_공고.html">POSITIONS</a></li>
                     </ul>
                 </nav>
                 <ul class="header-login">

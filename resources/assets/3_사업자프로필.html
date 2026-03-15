@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,viewport-fit=cover,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>인사이트베이</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+        <!-- Start : Header -->
+        <header class="header" id="header">
+        </header>
+        <!-- End : Header -->
+
+        <!-- Start : Main -->
+        <main>
+            <section class="sub-sec">
+                <div class="container">
+                    <div class="biz-top">
+                        <a href="#">채용공고 보러가기<img src="../assets/img/ico/i-arrow-circle-right.svg" alt="이동하기"></a>
+                    </div>
+                    <div class="biz-my">
+                        <div class="biz-title">
+                            <h3>사업자 프로필</h3>
+                            <div class="btn-group">
+                                <button type="button"><img src="img/ico/i-edit.svg" alt="수정하기">수정하기</button>
+                                <button type="button">로그아웃</button>
+                            </div>
+                        </div>
+                        <div class="biz-my-info">
+                            <div class="biz-my-profile">
+                                <input type="file" id="profileImgInput" accept="image/*">
+                                <!-- <label for="profileImgInput" class="btn-profile-edit">
+                                    <img src="img/ico/i-edit-w.svg" alt="프로필 이미지 변경">
+                                </label> -->
+                            </div>
+                            <div class="biz-my-detail-info">
+                                <dl>
+                                    <dt>*회사명</dt>
+                                    <dd>(주)인사이트베이</dd>
+                                </dl>
+                                <dl>
+                                    <dt>*이메일</dt>
+                                    <dd>supports@insightbay.co.kr</dd>
+                                </dl>
+                                <dl>
+                                    <dt>*주소지</dt>
+                                    <dd>서울시 중구 남대문로 9길</dd>
+                                </dl>
+                                <dl>
+                                    <dt>설립일</dt>
+                                    <dd>2026.01.22</dd>
+                                </dl>
+                                <dl>
+                                    <dt>*홈페이지</dt>
+                                    <dd>www.insightbay.co.kr</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="biz-my">
+                        <div class="biz-title">
+                            <h3>사업자 프로필</h3>
+                            <div class="btn-group">
+                                <button type="button" class="open-modal" data-modal-id="noSaveAlertModal">취소</button>
+                                <button type="button"><img src="img/ico/i-checkbox-checked.svg" alt="저장하기">저장하기</button>
+                            </div>
+                        </div>
+                        <div class="biz-my-info">
+                            <div class="biz-my-profile">
+                                <input type="file" id="profileImgInput" accept="image/*">
+                                <label for="profileImgInput" class="btn-profile-edit">
+                                    <img src="img/ico/i-edit-w.svg" alt="프로필 이미지 변경">
+                                </label>
+                            </div>
+                            <div class="biz-my-detail-info">
+                                <dl>
+                                    <dt>*회사명</dt>
+                                    <dd>(주)인사이트베이</dd>
+                                </dl>
+                                <dl>
+                                    <dt>*이메일</dt>
+                                    <dd>supports@insightbay.co.kr</dd>
+                                </dl>
+                                <dl>
+                                    <dt>*주소지</dt>
+                                    <dd>
+                                        <div class="input-group input-white">
+                                            <label for="emailInput" class="label-hidden">주소지</label>
+                                            <input type="text" value="서울시 중구 남대문로" id="emailInput">
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>설립일</dt>
+                                    <dd>
+                                        <div class="input-group input-white">
+                                            <label for="emailInput" class="label-hidden">설립일</label>
+                                            <input type="text" value="2026.01.03" id="emailInput">
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>*홈페이지</dt>
+                                    <dd>
+                                        <div class="input-group input-white">
+                                            <label for="emailInput" class="label-hidden">홈페이지</label>
+                                            <input type="text" value="www.insightbay.co.kr" id="emailInput">
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-group flex-end">
+                        <button type="button" class="btn btn-lg btn-primary">공고 등록하기</button>
+                    </div>
+                    <div class="biz-job-section">
+                        <div class="tab-wrap">
+                            <ul class="tab-list">
+                                <li class="active" data-tab="hiring">채용 중</li>
+                                <li data-tab="waiting">대기 중</li>
+                                <li data-tab="draft">임시 저장</li>
+                                <li data-tab="closed">마감된 공고</li>
+                            </ul>
+
+                            <div class="tab-content-wrap">
+                                <div class="tab-content active" id="hiring">
+                                    <ul class="biz-job-list">
+                                        <li>
+                                            <div class="biz-job-info">
+                                                <a class="biz-job-title" href="javascript:void(0);">
+                                                    <h3>
+                                                        <span class="asap">ASAP</span>
+                                                        <span>[인턴]</span>
+                                                        <b>디지털 채널 최적화 프로젝트 RA 모집</b>
+                                                        <span class="tag-booster tag-top">긴급채용</span>
+                                                    </h3>
+                                                    <ul class="biz-job-meta">
+                                                        <li>서울시 용산구</li>
+                                                        <li>~2025.10.22</li>
+                                                        <li>마감</li>
+                                                    </ul>
+                                                </a>
+                                                <div class="biz-job-actions">
+                                                    <div class="btn-group">
+                                                        <a href="3_채용공고_수정.html" class="btn btn-md btn-ico">
+                                                            <img src="img/ico/i-edit.svg" alt="수정하기">
+                                                        </a>
+                                                        <div class="dropdown-wrap">
+                                                            <button type="button"
+                                                                class="btn btn-md btn-black btn-dropdown btn-ico">
+                                                                <img src="img/ico/i-more.svg" alt="더보기">
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><button type="button">공고 마감</button></li>
+                                                                <li><button type="button">공고 복제</button></li>
+                                                                <li><button type="button"
+                                                                        class="text-danger">삭제하기</button></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="biz-job-info">
+                                                <a class="biz-job-title" href="javascript:void(0);">
+                                                    <h3>
+                                                        <span>[신입]</span>
+                                                        <b>디지털 채널 최적화 프로젝트 RA 모집</b>
+                                                        <span class="tag-booster tag-urgent">상단노출</span>
+                                                    </h3>
+                                                    <ul class="biz-job-meta">
+                                                        <li>서울시 용산구</li>
+                                                        <li>~2025.10.22</li>
+                                                        <li>마감</li>
+                                                    </ul>
+                                                </a>
+                                                <div class="biz-job-actions">
+                                                    <div class="btn-group">
+                                                        <a href="3_채용공고_수정.html" class="btn btn-md btn-ico">
+                                                            <img src="img/ico/i-edit.svg" alt="수정하기">
+                                                        </a>
+                                                        <div class="dropdown-wrap">
+                                                            <button type="button"
+                                                                class="btn btn-md btn-black btn-dropdown btn-ico">
+                                                                <img src="img/ico/i-more.svg" alt="더보기">
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><button type="button">공고 마감</button></li>
+                                                                <li><button type="button">공고 복제</button></li>
+                                                                <li><button type="button"
+                                                                        class="text-danger">삭제하기</button></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="biz-job-info">
+                                                <a class="biz-job-title" href="javascript:void(0);">
+                                                    <h3>
+                                                        <span>[신입]</span>
+                                                        <b>태양광 모듈시장 프로젝트</b>
+                                                        <span class="tag-booster tag-expired">부스터 종료</span>
+                                                    </h3>
+                                                    <ul class="biz-job-meta">
+                                                        <li>서울시 용산구</li>
+                                                        <li>~2025.10.22</li>
+                                                        <li>마감</li>
+                                                    </ul>
+                                                </a>
+                                                <div class="biz-job-actions">
+                                                    <div class="btn-group">
+                                                        <a href="3_채용공고_수정.html" class="btn btn-md btn-ico">
+                                                            <img src="img/ico/i-edit.svg" alt="수정하기">
+                                                        </a>
+                                                        <div class="dropdown-wrap">
+                                                            <button type="button"
+                                                                class="btn btn-md btn-black btn-dropdown btn-ico">
+                                                                <img src="img/ico/i-more.svg" alt="더보기">
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><button type="button">공고 마감</button></li>
+                                                                <li><button type="button">공고 복제</button></li>
+                                                                <li><button type="button"
+                                                                        class="text-danger">삭제하기</button></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="pagination">
+                                        <li class="prev">
+                                            <a href="javasciprt:void(0);">
+                                                <img src="img/ico/i-prev.svg" alt="이전으로">
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="javascript:void(0);">1</a></li>
+                                        <li><a href="javascript:void(0);">2</a></li>
+                                        <li><a href="javascript:void(0);">3</a></li>
+                                        <li><a href="javascript:void(0);">4</a></li>
+                                        <li><a href="javascript:void(0);">5</a></li>
+                                        <li class="next">
+                                            <a href="javasciprt:void(0);">
+                                                <img src="img/ico/i-next.svg" alt="다음으로">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content" id="waiting">
+                                    <ul class="biz-job-list">
+                                        <li>
+                                            <div class="biz-job-info">
+                                                <a class="biz-job-title" href="2_공고_대기중공고.html">
+                                                    <h3><span>[인턴]</span><b>디지털 채널 최적화
+                                                            프로젝트 RA 모집</b></h3>
+                                                    <ul class="biz-job-meta">
+                                                        <li>서울시 용산구</li>
+                                                        <li>~2025.10.22</li>
+                                                        <li>마감</li>
+                                                    </ul>
+                                                </a>
+                                                <div class="biz-job-actions">
+                                                    <div class="btn-group">
+                                                        <a href="3_채용공고_수정.html" class="btn btn-md btn-ico">
+                                                            <img src="img/ico/i-edit.svg" alt="수정하기">
+                                                        </a>
+                                                        <button type="button"
+                                                            class="btn btn-md btn-black btn-dropdown btn-ico">
+                                                            <img src="img/ico/i-x.svg" alt="삭제하기">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="biz-job-info">
+                                                <a class="biz-job-title" href="2_공고_대기중공고.html">
+                                                    <h3><span>[인턴]</span><b>디지털 채널 최적화
+                                                            프로젝트 RA 모집 RA 모집 RA 모집 RA 모집 모집 RA 모집 RA 모집</b></h3>
+                                                    <ul class="biz-job-meta">
+                                                        <li>서울시 용산구</li>
+                                                        <li>~2025.10.22</li>
+                                                        <li>마감</li>
+                                                    </ul>
+                                                </a>
+                                                <div class="biz-job-actions">
+                                                    <div class="btn-group">
+                                                        <a href="3_채용공고_수정.html" class="btn btn-md btn-ico">
+                                                            <img src="img/ico/i-edit.svg" alt="수정하기">
+                                                        </a>
+                                                        <button type="button"
+                                                            class="btn btn-md btn-black btn-dropdown btn-ico">
+                                                            <img src="img/ico/i-x.svg" alt="삭제하기">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="pagination">
+                                        <li class="prev">
+                                            <a href="javasciprt:void(0);">
+                                                <img src="img/ico/i-prev.svg" alt="이전으로">
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="javascript:void(0);">1</a></li>
+                                        <li><a href="javascript:void(0);">2</a></li>
+                                        <li><a href="javascript:void(0);">3</a></li>
+                                        <li><a href="javascript:void(0);">4</a></li>
+                                        <li><a href="javascript:void(0);">5</a></li>
+                                        <li class="next">
+                                            <a href="javasciprt:void(0);">
+                                                <img src="img/ico/i-next.svg" alt="다음으로">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content" id="draft">
+                                    <ul class="biz-job-list">
+                                        <li>
+                                            <div class="biz-job-info job-colum">
+                                                <a class="biz-job-title" href="2_공고_대기중공고.html">
+                                                    <h3><span>[인턴]</span><b>디지털 채널 최적화 프로젝트 RA 모집 디지털 채널 최적화 프로젝트 RA
+                                                            모집</b></h3>
+                                                    <ul class="biz-job-meta">
+                                                        <li>서울시 용산구</li>
+                                                        <li>~2025.10.22</li>
+                                                        <li>마감</li>
+                                                    </ul>
+                                                </a>
+                                                <div class="biz-job-actions">
+                                                    <div class="btn-group">
+                                                        <a href="3_채용공고_수정.html" class="btn btn-md">이어서 작성하기</a>
+                                                        <button type="button"
+                                                            class="btn btn-md btn-black btn-dropdown btn-ico">
+                                                            <img src="img/ico/i-x.svg" alt="삭제하기">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="biz-job-info job-colum">
+                                                <a class="biz-job-title" href="2_공고_대기중공고.html">
+                                                    <h3><span>[인턴]</span><b>디지털 채널 최적화 프로젝트 RA 모집 디지털 채널 최적화 프로젝트 RA
+                                                            모집</b></h3>
+                                                    <ul class="biz-job-meta">
+                                                        <li>서울시 용산구</li>
+                                                        <li>~2025.10.22</li>
+                                                        <li>마감</li>
+                                                    </ul>
+                                                </a>
+                                                <div class="biz-job-actions">
+                                                    <div class="btn-group">
+                                                        <a href="3_채용공고_수정.html" class="btn btn-md">이어서 작성하기</a>
+                                                        <button type="button"
+                                                            class="btn btn-md btn-black btn-dropdown btn-ico">
+                                                            <img src="img/ico/i-x.svg" alt="삭제하기">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="pagination">
+                                        <li class="prev">
+                                            <a href="javasciprt:void(0);">
+                                                <img src="img/ico/i-prev.svg" alt="이전으로">
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="javascript:void(0);">1</a></li>
+                                        <li><a href="javascript:void(0);">2</a></li>
+                                        <li><a href="javascript:void(0);">3</a></li>
+                                        <li><a href="javascript:void(0);">4</a></li>
+                                        <li><a href="javascript:void(0);">5</a></li>
+                                        <li class="next">
+                                            <a href="javasciprt:void(0);">
+                                                <img src="img/ico/i-next.svg" alt="다음으로">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content" id="closed">
+                                    <ul class="biz-job-list">
+                                        <li>
+                                            <div class="biz-job-info job-colum">
+                                                <a class="biz-job-title" href="2_공고_대기중공고.html">
+                                                    <h3><span>[인턴]</span><b>디지털 채널 최적화 프로젝트 RA 모집 디지털 채널 최적화 프로젝트 RA
+                                                            모집</b></h3>
+                                                    <ul class="biz-job-meta">
+                                                        <li>서울시 용산구</li>
+                                                        <li>~2025.10.22</li>
+                                                        <li>마감</li>
+                                                    </ul>
+                                                </a>
+                                                <div class="biz-job-actions">
+                                                    <div class="btn-group">
+                                                        <a href="javascript:void(0);" class="btn btn-md">복제하기</a>
+                                                        <button type="button"
+                                                            class="btn btn-md btn-black btn-dropdown btn-ico">
+                                                            <img src="img/ico/i-x.svg" alt="삭제하기">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="biz-job-info job-colum">
+                                                <a class="biz-job-title" href="2_공고_대기중공고.html">
+                                                    <h3><span>[인턴]</span><b>디지털 채널 최적화 프로젝트 RA 모집 디지털 채널 최적화 프로젝트 RA
+                                                            모집</b></h3>
+                                                    <ul class="biz-job-meta">
+                                                        <li>서울시 용산구</li>
+                                                        <li>~2025.10.22</li>
+                                                        <li>마감</li>
+                                                    </ul>
+                                                </a>
+                                                <div class="biz-job-actions">
+                                                    <div class="btn-group">
+                                                        <a href="javascript:void(0);" class="btn btn-md">복제하기</a>
+                                                        <button type="button"
+                                                            class="btn btn-md btn-black btn-dropdown btn-ico">
+                                                            <img src="img/ico/i-x.svg" alt="삭제하기">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="pagination">
+                                        <li class="prev">
+                                            <a href="javasciprt:void(0);">
+                                                <img src="img/ico/i-prev.svg" alt="이전으로">
+                                            </a>
+                                        </li>
+                                        <li class="active"><a href="javascript:void(0);">1</a></li>
+                                        <li><a href="javascript:void(0);">2</a></li>
+                                        <li><a href="javascript:void(0);">3</a></li>
+                                        <li><a href="javascript:void(0);">4</a></li>
+                                        <li><a href="javascript:void(0);">5</a></li>
+                                        <li class="next">
+                                            <a href="javasciprt:void(0);">
+                                                <img src="img/ico/i-next.svg" alt="다음으로">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="ad-link">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img src="img/ad/ad-01.png" alt="상단 노출(5일)">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <img src="img/ad/ad-02.png" alt="긴급 채용 (3일)">
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="biz-del-account">
+                        <a href="javascript:void(0);" class="open-modal" data-modal-id="secessionModal01">탈퇴하기</a>
+                    </p>
+                </div>
+            </section>
+        </main>
+        <!-- End : Main -->
+
+        <!-- Start : Footer -->
+        <footer class="footer" id="footer"></footer>
+        <!-- End : Footer -->
+    </div>
+
+    <!-- 대기중인 공고 수정하기 -->
+    <div class="modal-wrap join-modal job-modal" id="loadJobEditModal">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-ico btn-modal-close">
+                        <img src="img/ico/i-modal-close.svg" alt="모달 닫기">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>공고를 수정하면,<br>검토가 새롭게 진행됩니다.
+                        수정할까요?</h4>
+                    <div class="btn-group">
+                        <button type="type" class="btn btn-gray">수정하기</button>
+                        <button type="type" class="btn btn-black btn-modal-close">나가기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 저장 전 나가기 -->
+    <div class="modal-wrap join-modal job-modal" id="noSaveAlertModal">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-ico btn-modal-close">
+                        <img src="img/ico/i-modal-close.svg" alt="모달 닫기">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4>저장하지 않고 나가면 수정한 내용이 삭제됩니다.<br>삭제할까요?</h4>
+                    <div class="btn-group">
+                        <button type="type" class="btn btn-gray">저장하기</button>
+                        <button type="type" class="btn btn-black btn-modal-close">나가기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 탈퇴 모달 -->
+    <div class="modal-wrap secession-modal" id="secessionModal01">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-ico btn-modal-close">
+                        <img src="img/ico/i-modal-close.svg" alt="모달 닫기">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="secession-msg">
+                        <img src="img/owl-01.svg" alt="캐릭터" class="secession-img">
+                        <h3>정말 탈퇴하실 건가요?</h3>
+                        <h5>탈퇴 후에는 더 이상 고스펙 지원자를<br>
+                            만나볼 수 없어요..괜찮으신가요?</h5>
+                    </div>
+                    <div class="btn-group">
+                        <button type="type" class="btn btn-black btn-modal-close">안할래요.</button>
+                        <button type="type" class="btn btn-black btn-gray open-modal"
+                            data-modal-id="secessionModal02">괜찮아요.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 탈퇴 재확인 모달 -->
+    <div class="modal-wrap secession-modal" id="secessionModal02">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-ico btn-modal-close">
+                        <img src="img/ico/i-modal-close.svg" alt="모달 닫기">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="secession-msg">
+                        <img src="img/owl-02.svg" alt="캐릭터" class="secession-img">
+                        <h3>탈퇴 완료 후에는 계정이 삭제되며,<br>
+                            복구할 수 없습니다.</h3>
+                        <div class="check-group black">
+                            <input type="checkbox" id="check01">
+                            <label for="check01">네, 확인했습니다.</label>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="type" class="btn btn-black btn-modal-close">탈퇴하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start : Script -->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/component.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/new.js"></script>
+    <!-- End : Script -->
+
+</body>
+
+</html>
