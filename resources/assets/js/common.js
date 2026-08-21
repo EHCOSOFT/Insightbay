@@ -248,6 +248,11 @@ $(document).ready(function () {
         }, 500); // 500ms에 부드럽게 이동
     });
 
+    // FAQ 아코디언
+    $('.faq-accordion .faq-question').on('click', function () {
+        $(this).closest('.faq-item').toggleClass('active');
+    });
+
 
 
     // ==============================
